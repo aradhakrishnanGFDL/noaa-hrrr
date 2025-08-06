@@ -1,0 +1,40 @@
+{
+  "esmcat_version": "0.1.0",
+  "attributes": [
+    {
+      "column_name": "date",
+      "type": "string",
+      "description": "Forecast initialization date"
+    },
+    {
+      "column_name": "cycle",
+      "type": "string",
+      "description": "Forecast cycle hour"
+    },
+    {
+      "column_name": "forecast_hour",
+      "type": "string",
+      "description": "Forecast hour"
+    },
+    {
+      "column_name": "domain",
+      "type": "string",
+      "description": "Geographic domain"
+    },
+    {
+      "column_name": "variable",
+      "type": "string",
+      "description": "Variable type"
+    }
+  ],
+  "assets": {
+    "column_name": "path",
+    "format": "netcdf"
+  },
+  "catalog_file": "rrfs_ak_ensemble.csv",
+  "aggregation": {
+    "type": "join_new",
+    "attribute_name": "forecast_hour",
+    "options": {"dim": "step"}
+  }
+}

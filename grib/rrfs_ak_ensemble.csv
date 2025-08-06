@@ -1,0 +1,4 @@
+date,cycle,forecast_hour,domain,variable,path
+2025-07-02,00,01,ak,avrg,/home/a1r/grib/rrfs_grib_data/refs.t00z.ak.avrg.f01.grib2
+2025-07-02,00,02,ak,avrg,/home/a1r/grib/rrfs_grib_data/refs.t00z.ak.avrg.f02.grib2
+2025-07-02,00,03,ak,avrg,/home/a1r/grib/rrfs_grib_data/refs.t00z.ak.avrg.f03.grib2

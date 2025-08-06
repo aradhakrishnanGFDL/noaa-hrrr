@@ -1,0 +1,27 @@
+{
+  "esmcat_version": "0.1.0",
+  "catalog_file": "catalog.csv",
+  "attributes": [
+    {"column_name": "date", "description": "Initialization date"},
+    {"column_name": "cycle", "description": "Cycle hour"},
+    {"column_name": "forecast_hour", "description": "Forecast hour"},
+    {"column_name": "domain", "description": "Domain (e.g., ak)"},
+    {"column_name": "variable", "description": "Variable (e.g., avrg)"}
+  ],
+  "assets": {
+    "column_name": "path",
+    "format": "netcdf"  
+  },
+  "aggregation_control": {
+    "variable_column_name": "variable",
+    "groupby_attrs": ["date", "cycle", "domain", "variable"],
+    "aggregations": [
+      {
+        "type": "join_new",
+        "attribute_name": "forecast_hour",
+        "options": {"dim": "step"}
+      }
+    ]
+  }
+}
+
